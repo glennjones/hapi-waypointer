@@ -1,0 +1,47 @@
+{
+  "name": "hapi-waypointer",
+  "version": "0.1.0",
+  "description": "A HAPI plug-in that provides modern auto documentation of APIs using Waypointer themes",
+  "keywords": [
+    "waypointer",
+    "modern",
+    "documentation",
+    "swagger",
+    "har"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "async": "^1.5.2",
+    "handlebars": "^4.0.5",
+    "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
+    "hapi-swagger": "glennjones/hapi-swagger",
+    "highlight.js": "^9.1.0",
+    "hoek": "^3.0.4",
+    "httpsnippet": "^1.16.5",
+    "joi": "7.2.3",
+    "js-beautify": "^1.6.2",
+    "json-schema-ref-parser": "^2.2.0",
+    "marked": "^0.3.5",
+    "swagger-exemplar": "glennjones/swagger-exemplar",
+    "swagger-har": "glennjones/swagger-har",
+    "waypointer-plain": "glennjones/waypointer-plain",
+    "wreck": "^7.0.0"
+  },
+  "devDependencies": {
+    "inert": "^3.2.0",
+    "vision": "^4.0.1",
+    "blipp": "^2.3.0",
+    "good": "^6.5.0",
+    "good-console": "^5.3.0",
+    "lab": "8.2.0",
+    "code": "2.1.0",
+    "hapi": "^13.0.0",
+    "coveralls": "2.11.6",
+    "js2xmlparser": "^1.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+lcov.info
+coverage.html
+
+node_modules
+npm-debug.log
+.DS_Store
+.vscode
+.coveralls.yml
