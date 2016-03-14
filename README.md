@@ -52,6 +52,7 @@ server.register([
 ## Current themes
 * [Plain](https://github.com/glennjones/waypointer-plain) - A plain html theme.
 * [Hub](https://github.com/glennjones/waypointer-hub) - A theme based lossly on githubs API documentation style.
+* [Hub](https://github.com/glennjones/waypointer-form) - A form or playground theme
 
 
 
