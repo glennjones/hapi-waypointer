@@ -21,7 +21,7 @@
     "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
     "hapi-swagger": "glennjones/hapi-swagger",
     "highlight.js": "^9.1.0",
-    "hoek": "^4.2.1",
+    "hoek": "^6.1.3",
     "httpsnippet": "^1.16.5",
     "joi": "8.1.0",
     "js-beautify": "^1.6.2",
