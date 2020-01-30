@@ -26,7 +26,7 @@
     "joi": "8.1.0",
     "js-beautify": "^1.6.2",
     "json-schema-ref-parser": "^2.2.0",
-    "marked": "^0.6.2",
+    "marked": "^0.8.0",
     "swagger-exemplar": "glennjones/swagger-exemplar",
     "swagger-har": "glennjones/swagger-har",
     "waypointer-plain": "glennjones/waypointer-plain",
