@@ -1,6 +1,6 @@
 'use strict';
-const Joi = require('joi');
-const Wreck = require('wreck');
+const Joi = require('@hapi/joi');
+const Wreck = require('@hapi/wreck');
 const js2xmlparser = require('js2xmlparser');
 
 
@@ -384,7 +384,7 @@ module.exports = [{
                 operator: Joi.string()
                     .required()
                     .default('+')
-                    .valid(['+', '-', '/', '*'])
+                    .valid('+', '-', '/', '*')
                     .description('the opertator i.e. + - / or *'),
 
                 equals: Joi.number()
@@ -425,7 +425,7 @@ module.exports = [{
                 operator: Joi.string()
                     .required()
                     .default('+')
-                    .valid(['+', '-', '/', '*'])
+                    .valid('+', '-', '/', '*')
                     .description('the opertator i.e. + - / or *'),
 
                 equals: Joi.number()
@@ -481,7 +481,7 @@ module.exports = [{
                 operator: Joi.string()
                     .required()
                     .default('+')
-                    .valid(['+', '-', '/', '*'])
+                    .valid('+', '-', '/', '*')
                     .description('the opertator i.e. + - / or *'),
 
                 equals: Joi.number()

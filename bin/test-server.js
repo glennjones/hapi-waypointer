@@ -1,28 +1,28 @@
-'use strict';
 const Fs = require("fs");
 const Path = require("path");
-const Wreck = require('wreck');
+const Wreck = require('@hapi/wreck');
 const Blipp = require('blipp');
-const Hapi = require('hapi');
-const Inert = require('inert');
-const Vision = require('vision');
+const Hapi = require('@hapi/hapi');
+const Inert = require('@hapi/inert');
+const Vision = require('@hapi/vision');
 const HapiSwagger = require('hapi-swagger');
 
-const Routes = require('../bin/routes.js');
+const Routes = require('../bin/routes-simple.js');
 const Pack = require('../package');
 const Waypointer = require('../lib/index.js');
 
-
+/*
 let server = new Hapi.Server();
 server.connection({
     host: 'localhost',
     port: 3014
 });
+*/
 
 
 const goodOptions = {
     reporters: [{
-        reporter: require('good-console'),
+        reporter: require('@hapi/good-console'),
         events: { log: '*', response: '*' }
     }]
 };
@@ -127,7 +127,7 @@ let waypointerOptions = {
 
 
 
-
+/*
 server.register([
     Inert,
     Vision,
@@ -153,5 +153,41 @@ server.register([
             }
         });
     });
+    */
 
 
+   (async () => {
+    const server = await new Hapi.Server({
+        host: 'localhost',
+        port: 3025,
+    });
+
+    const swaggerOptions = {
+        info: {
+                title: 'Test API Documentation',
+                version: Pack.version,
+            },
+        };
+
+    await server.register([
+        Inert,
+        Vision,
+        Blipp,
+        {
+            plugin: HapiSwagger,
+            options: swaggerOptions
+        },{
+            plugin: Waypointer,
+            options: waypointerOptions
+        }
+    ]);
+
+    try {
+        await server.start();
+        console.log('Server running at:', server.info.uri);
+    } catch(err) {
+        console.log(err);
+    }
+
+    server.route(Routes);
+})();
