@@ -20,7 +20,7 @@
     "@hapi/joi": "17.1.0",
     "@hapi/wreck": "^17.0.0",
     "async": "^3.1.1",
-    "handlebars": "^4.7.2",
+    "handlebars": "^4.7.3",
     "handlebars-helpers": "github:glennjones/handlebars-helpers-dev",
     "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
     "hapi-swagger": "github:glennjones/hapi-swagger",
