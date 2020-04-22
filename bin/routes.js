@@ -1,6 +1,5 @@
 'use strict';
 const Joi = require('@hapi/joi');
-const Wreck = require('@hapi/wreck');
 const js2xmlparser = require('js2xmlparser');
 
 

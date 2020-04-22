@@ -1,31 +1,17 @@
 const Fs = require("fs");
 const Path = require("path");
-const Wreck = require('@hapi/wreck');
 const Blipp = require('blipp');
 const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
 const Vision = require('@hapi/vision');
 const HapiSwagger = require('hapi-swagger');
+const Nunjucks = require('nunjucks');
+const NunjucksTools = require('@glennjones/nunjucks-tools');
 
 const Routes = require('../bin/routes-simple.js');
 const Pack = require('../package');
 const Waypointer = require('../lib/index.js');
 
-/*
-let server = new Hapi.Server();
-server.connection({
-    host: 'localhost',
-    port: 3014
-});
-*/
-
-
-const goodOptions = {
-    reporters: [{
-        reporter: require('@hapi/good-console'),
-        events: { log: '*', response: '*' }
-    }]
-};
 
 
 let swaggerOptions = {
@@ -127,47 +113,13 @@ let waypointerOptions = {
 
 
 
-/*
-server.register([
-    Inert,
-    Vision,
-    Blipp,
-    {
-        register: require('good'),
-        options: goodOptions
-    },{
-        register: HapiSwagger,
-        options: swaggerOptions
-    },{
-        register: Waypointer,
-        options: waypointerOptions
-    }], (err) => {
-
-        server.route(Routes);
-
-        server.start((err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log('Server running at:', server.info.uri);
-            }
-        });
-    });
-    */
-
-
    (async () => {
     const server = await new Hapi.Server({
         host: 'localhost',
         port: 3025,
     });
 
-    const swaggerOptions = {
-        info: {
-                title: 'Test API Documentation',
-                version: Pack.version,
-            },
-        };
+
 
     await server.register([
         Inert,
@@ -188,6 +140,31 @@ server.register([
     } catch(err) {
         console.log(err);
     }
+
+    let noCache = true
+    server.views({
+        path: Path.join(__dirname, '../templates'),
+        engines: {
+        njk: {
+            compile: (src, options) => {
+                const template = Nunjucks.compile(src, options.environment);
+                return  (context) => {
+                    return template.render(context);
+                };
+            },
+            prepare:  (options, next) => {
+
+                let env = Nunjucks.configure(options.path, { watch: noCache, noCache: noCache });
+                //env.addExtension('with', new NunjucksTools.withTag(env));
+                env.addExtension('withInclude', new NunjucksTools.includeWith(env));
+                options.compileOptions.environment = env;
+
+                return next();
+            }
+        }
+        },
+        isCached: false,
+    });
 
     server.route(Routes);
 })();
