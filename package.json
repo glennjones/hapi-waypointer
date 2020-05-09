@@ -1,6 +1,6 @@
 {
   "name": "hapi-waypointer",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A HAPI plug-in that provides modern auto documentation of APIs using Waypointer themes",
   "keywords": [
     "waypointer",
