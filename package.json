@@ -1,6 +1,6 @@
 {
   "name": "hapi-waypointer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A HAPI plug-in that provides modern auto documentation of APIs using Waypointer themes",
   "keywords": [
     "waypointer",
@@ -28,14 +28,6 @@
     "@hapi/hoek": "^9.0.4",
     "@hapi/joi": "17.1.0",
     "async": "^3.2.0",
-    "hapi-swagger": "^13.0.0",
-    "highlight.js": "^9.18.1",
-    "js-beautify": "^1.11.0",
-    "json-schema-ref-parser": "^7.1.4",
-    "marked": "^0.8.2",
-    "nunjucks": "^3.2.1",
-    "swagger-exemplar": "^0.4.2",
-    "swagger-har": "^2.0.1",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "debug": "^2.2.0",
@@ -43,9 +35,18 @@
     "form-data": "3.0.0",
     "fs-readfile-promise": "^2.0.1",
     "fs-writefile-promise": "^1.0.3",
+    "hapi-swagger": "^13.0.0",
     "har-validator": "^5.0.0",
+    "highlight.js": "^9.18.1",
+    "js-beautify": "^1.11.0",
+    "json-schema-ref-parser": "^7.1.4",
+    "marked": "^0.8.2",
+    "nunjucks": "^3.2.1",
     "pinkie-promise": "^2.0.0",
-    "stringify-object": "^3.3.0"
+    "slugify": "^1.4.0",
+    "stringify-object": "^3.3.0",
+    "swagger-exemplar": "^0.4.2",
+    "swagger-har": "^2.0.1"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",
