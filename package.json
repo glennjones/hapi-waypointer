@@ -40,7 +40,7 @@
     "highlight.js": "^9.18.1",
     "js-beautify": "^1.11.0",
     "json-schema-ref-parser": "^7.1.4",
-    "marked": "^0.8.2",
+    "marked": "^1.1.1",
     "nunjucks": "^3.2.1",
     "pinkie-promise": "^2.0.0",
     "slugify": "^1.4.0",
