@@ -1,6 +1,6 @@
 # waypointer
 
-## IN DEVELOPMENT - API NOT STABLE
+## IN DEVELOPMENT
 
 A HAPI plug-in that provides a template framework for OpenAPI (aka swagger).
 
