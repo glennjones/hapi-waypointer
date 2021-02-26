@@ -41,7 +41,7 @@
     "js-beautify": "^1.13.0",
     "json-schema-ref-parser": "^7.1.4",
     "marked": "^1.2.3",
-    "nunjucks": "^3.2.2",
+    "nunjucks": "^3.2.3",
     "pinkie-promise": "^2.0.0",
     "slugify": "^1.4.6",
     "stringify-object": "^3.3.0",
