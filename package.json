@@ -35,7 +35,7 @@
     "form-data": "3.0.0",
     "fs-readfile-promise": "^2.0.1",
     "fs-writefile-promise": "^1.0.3",
-    "hapi-swagger": "^13.1.0",
+    "hapi-swagger": "^14.2.5",
     "har-validator": "^5.1.5",
     "highlight.js": "^9.18.3",
     "js-beautify": "^1.13.0",
