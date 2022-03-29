@@ -38,7 +38,7 @@
     "hapi-swagger": "^13.1.0",
     "har-validator": "^5.1.5",
     "highlight.js": "^9.18.3",
-    "js-beautify": "^1.13.0",
+    "js-beautify": "^1.14.1",
     "json-schema-ref-parser": "^7.1.4",
     "marked": "^1.2.3",
     "nunjucks": "^3.2.2",
